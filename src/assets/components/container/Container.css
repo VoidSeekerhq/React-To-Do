@@ -81,6 +81,7 @@
     padding: 8px 16px;
     border: 2px solid var(--muted-color);
     transition: border-radius 0.1s ease-out;
+    cursor: pointer;
 }
 
 .selected {
