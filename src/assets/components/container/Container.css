@@ -1,0 +1,171 @@
+.container,
+.header,
+.add-container,
+.filter,
+.todos,
+.todo,
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header,
+.add-container,
+.filter,
+.todo,
+.buttons {
+    flex-direction: row;
+    align-items: center;
+}
+
+.header,
+.filter,
+.todos,
+.todo,
+.title {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    background-color: var(--surface-color);
+    padding: 16px;
+    border-radius: 24px;
+}
+
+.header h2 {
+    width: 100%;
+}
+
+.todos {
+    height: 100%;
+    justify-content: start;
+}
+
+.add-container {
+    background-color: var(--muted-color);
+    border-radius: 100px;
+}
+
+.task-input {
+    border: none;
+    height: 100%;
+    border-radius: 100px;
+    padding: 0px 16px;
+    background-color: var(--muted-color);
+    font-size: 14px;
+}
+
+.filter {
+    justify-content: start;
+    gap: 2px;
+    padding: 8px;
+}
+
+
+.filter li:first-child {
+    border-radius: 16px 4px 4px 16px;
+}
+
+.filter li:nth-child(2) {
+    border-radius: 4px;
+}
+
+.filter li:nth-child(3) {
+    border-radius: 4px 16px 16px 4px;
+}
+
+.filter li {
+    padding: 8px 16px;
+    border: 2px solid var(--muted-color);
+    transition: border-radius 0.1s ease-out;
+}
+
+.selected {
+    background-color: var(--muted-color);
+    border-radius: 16px;
+}
+
+.todos {
+    overflow-y: auto;
+    gap: 8px;
+    border-radius: 16px;
+    margin-top: 4px;
+}
+
+.todo {
+    justify-content: space-between;
+    padding: 8px;
+    gap: 16px;
+    border-radius: 100px;
+}
+
+.buttons {
+    gap: 8px;
+}
+
+.buttons svg {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    border-radius: 8px;
+    transition: all 0.1s ease-out;
+}
+
+.buttons svg:hover {
+    background-color: var(--muted-color);
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.edit-input {
+    width: 25%;
+    padding: 4px;
+    font-size: 14px;
+    color: var(--text-color);
+    border-radius: 100px;
+    border: 2px solid var(--muted-color);
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        width: 100dvw;
+        height: 100dvh;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 36px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .add-container, .task-input {
+        width: 100%;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+
+    .filter {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+        border-top: 1px solid var(--muted-color);
+        padding: 16px;
+    }
+
+    .todos {
+        margin-top: 24px;
+    }
+}
